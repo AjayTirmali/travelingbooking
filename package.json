@@ -1,0 +1,28 @@
+{
+  "name": "travel-booking-system",
+  "version": "1.0.0",
+  "description": "A travel booking system with MongoDB and GraphQL",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm run dev",
+    "start:frontend": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "clean": "node cleanup.js"
+  },
+  "keywords": [
+    "travel",
+    "booking",
+    "mongodb",
+    "graphql",
+    "react"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

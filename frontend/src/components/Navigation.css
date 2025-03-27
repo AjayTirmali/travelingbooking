@@ -1,0 +1,66 @@
+.navigation {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  flex: 1;
+}
+
+.nav-links button {
+  width: 100%;
+  padding: 1rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-links li.active button {
+  background-color: #3498db;
+  color: white;
+}
+
+.nav-links button:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-links li.active button:hover {
+  background-color: #2980b9;
+}
+
+.nav-links li:first-child button {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.nav-links li:last-child button {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+  }
+  
+  .nav-links li:first-child button {
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .nav-links li:last-child button {
+    border-radius: 0 0 8px 8px;
+  }
+} 
