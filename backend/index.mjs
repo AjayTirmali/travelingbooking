@@ -22,7 +22,10 @@ mongoose.connect(mongoURI, {
 
 // Initialize Express
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["https://traveling-booking-system.vercel.app", "http://localhost:3000"],
+  credentials: true
+}));
 app.use(express.json());
 
 // Function to clean up expired bookings
