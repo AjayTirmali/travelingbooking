@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/graphql",
+      "dest": "/api/graphql.js"
+    },
+    {
+      "src": "/api/cleanup",
+      "dest": "/api/cleanup.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/graphql.js"
+    }
+  ],
+  "env": {
+    "MONGO_URI": "@mongo_uri"
+  }
+} 
