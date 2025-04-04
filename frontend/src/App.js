@@ -19,7 +19,7 @@ const getGraphQLEndpoint = () => {
 const client = new ApolloClient({
   link: new HttpLink({
     uri: getGraphQLEndpoint(),
-    credentials: 'same-origin'
+    credentials: 'include'
   }),
   cache: new InMemoryCache()
 });
