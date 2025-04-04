@@ -112,3 +112,9 @@ npm run clean
 ## License
 
 ISC 
+
+
+cors({
+    origin: "travelingbooking-g3biu9my7-ajay-tirmalis-projects.vercel.app",
+    credentials: true,
+  })
