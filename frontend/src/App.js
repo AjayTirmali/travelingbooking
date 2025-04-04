@@ -7,9 +7,9 @@ import './App.css';
 
 // Determine the GraphQL endpoint based on environment
 const getGraphQLEndpoint = () => {
-  // In production, use relative URL that will be proxied to the backend
+  // In production, use the Vercel deployed backend URL
   if (process.env.NODE_ENV === 'production') {
-    return '/graphql';
+    return 'https://travelingbooking-hjkb62a3p-ajay-tirmalis-projects.vercel.app/graphql';
   }
   // In development, use the full URL
   return 'http://localhost:5000/graphql';
