@@ -23,12 +23,8 @@ mongoose.connect(mongoURI, {
 // Initialize Express
 const app = express();
 app.use(cors({
-  origin: [
-    "https://traveling-booking-system.vercel.app", 
-    "https://travelingbooking-hjkb62a3p-ajay-tirmalis-projects.vercel.app",
-    "http://localhost:3000"
-  ],
-  credentials: true
+  origin: "https://travelingbooking-hjkb62a3p-ajay-tirmalis-projects.vercel.app",
+  credentials: true,
 }));
 app.use(express.json());
 
